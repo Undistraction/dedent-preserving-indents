@@ -70,8 +70,7 @@ const example = indentToFirstLine(
                     - here is an indented line
                     - here is another
                       - and here is a doubly indented line
-                `
-)
+                `)
 ```
 
 Note: If you don't put the first line of chars on a new line, the function will have no effect as there will be no leading whitespace there, meaning it cannot decide how much whitespace to remove from subsequent lines.
