@@ -6,7 +6,11 @@
     "type": "git",
     "url": "git+https://github.com/Undistraction/indent-to-first-line.git"
   },
-  "files": ["dist", "src", "lib"],
+  "files": [
+    "dist",
+    "src",
+    "lib"
+  ],
   "keywords": [],
   "author": "Pedr Browne",
   "license": "MIT",
@@ -59,9 +63,7 @@
     "rollup-plugin-node-resolve": "^3.0.0"
   },
   "dependencies": {
-    "ramda": "^0.25.0",
-    "ramda-adjunct": "^2.5.0",
-    "ramda-log": "0.0.3"
+    "ramda": "^0.25.0"
   },
   "husky": {
     "hooks": {
