@@ -31,13 +31,13 @@ const example = `This is a string
                     - and here is a doubly indented line`
 ```
 
-Although this string looks like the string you might be expecting, when you try and compare it, you will realise that there are lots of additional spaces within the string. If you were to replace each space with an underscore you would see:
+Although this string looks like the string you might be expecting, when you try and compare it, you will realise that there are lots of additional spaces within the string from the indentation which includes both the indentation to get the lines to line up and any deliberate indentation included in your string. If you were to replace each space with a `•` you would see:
 
 ```text
 This is a string
-__________________- here is an indented line
-__________________- here is another
-____________________- and here is a doubly indented line
+•••••••••••••••••- here is an indented line
+•••••••••••••••••- here is another
+•••••••••••••••••••- and here is a doubly indented line
 ```
 
 Which is probably not what you want.
