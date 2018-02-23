@@ -4,7 +4,7 @@
 [![codecov](https://img.shields.io/codecov/c/github/Undistraction/indent-to-first-line.svg)](https://codecov.io/gh/Undistraction/indent-to-first-line)
 [![Build Status](https://img.shields.io/travis/Undistraction/indent-to-first-line.svg)](https://travis-ci.org/Undistraction/indent-to-first-line)
 [![DUB](https://img.shields.io/dub/l/vibe-d.svg)](./LICENSE.md)
-[![Node Security](https://nodesecurity.io/orgs/dwyl/projects/1047e39b-0d4a-45ff-af65-c04afc41fc20/badge)](https://nodesecurity.io/orgs/dwyl/projects/1047e39b-0d4a-45ff-af65-c04afc41fc20)
+[![Node Security](https://nodesecurity.io/orgs/dwyl/projects/b14b4e9c-faf5-46b7-b8aa-9b1c026c4b51/badge)](https://nodesecurity.io/orgs/dwyl/projects/b14b4e9c-faf5-46b7-b8aa-9b1c026c4b51)
 
 A simple utility function to make working with multiline strings defined in template strings much easier.
 
