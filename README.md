@@ -33,11 +33,11 @@ const example = `This is a string
 
 Although this string looks like the string you might be expecting, when you try and compare it, you will realise that there are lots of additional spaces within the string. If you were to replace each space with an underscore you would see:
 
-```javascript
-;`This is a string
+```text
+This is a string
 __________________- here is an indented line
 __________________- here is another
-____________________- and here is a doubly indented line`
+____________________- and here is a doubly indented line
 ```
 
 Which is probably not what you want.
@@ -46,30 +46,30 @@ Which is probably not what you want.
 
 ```javascript
 const example = indentToFirstLine(
-  `This is a string
-                  - here is an indented line
-                  - here is another
-                    - and here is a doubly indented line`
+                  `This is a string
+                    - here is an indented line
+                    - here is another
+                      - and here is a doubly indented line`
 )
 ```
 
 This will give you a string like this:
 
-```javascript
-;`This is a string
+```text
+This is a string
   - here is an indented line
   - here is another
-    - and here is a doubly indented line`
+    - and here is a doubly indented line
 ```
 
 This first empty line will be removed, as will any trailing lines that consist only of whitespace, so the following will result in exactly the same string:
 
 ```javascript
 const example = indentToFirstLine(
-  `This is a string
-                  - here is an indented line
-                  - here is another
-                    - and here is a doubly indented line
+                  `This is a string
+                    - here is an indented line
+                    - here is another
+                      - and here is a doubly indented line
                 `
 )
 ```
