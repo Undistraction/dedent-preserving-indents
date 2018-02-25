@@ -8,6 +8,8 @@
 
 A simple utility function to make working with multiline strings defined in template strings much easier.
 
+There is already a library called [dedent](https://www.npmjs.com/package/dedent) which strips leading whitespace, but it doesn't preserve indentation relative to the line with the least leading whitespace, but this one does. 
+ 
 ## Install
 
 ```
@@ -35,17 +37,17 @@ Although this string looks like the string you might be expecting, when you try 
 
 ```text
 This is a string
-•••••••••••••••••- here is an indented line
-•••••••••••••••••- here is another
-•••••••••••••••••••- and here is a doubly indented line
+••••••••••••••••••- here is an indented line
+••••••••••••••••••- here is another
+••••••••••••••••••••- and here is a doubly indented line
 ```
 
 Which is probably not what you want.
 
-`indent-to-first-line` helps you solve this problem by trimming the leading spaces of a string away so the string is how you expect. To do this it needs you to do one critical thing - you need to start the first line of the string on a new line so that it can detect the number of spaces before the first line and adjust the others accordingly:
+This lib helps you solve this problem by trimming the leading spaces of a string away so the string is how you expect. This library will check all lines and find the line(s) with the least leading spaces. It will then remove that many spaces from all lines. This results in the line(s) with the least leading whitespace having no leading whitespace, and any other indented lines being indented relative to this/these line(s)s
 
 ```javascript
-const example = indentToFirstLine(
+const example = dedent(
                   `This is a string
                     - here is an indented line
                     - here is another
@@ -62,18 +64,20 @@ This is a string
     - and here is a doubly indented line
 ```
 
+### Important Caveats
+
+You will probably have noticed that the first line is empty in the examples above. If you don't put the first line of chars on a new line, the function will have no effect as there will be no leading whitespace for that line, meaning no leading whitespace will be removed from the other lines. **Always put the first line on a newline**.
+
 This first empty line will be removed, as will any trailing lines that consist only of whitespace, so the following will result in exactly the same string:
 
 ```javascript
-const example = indentToFirstLine(
+const example = dedent(
                   `This is a string
                     - here is an indented line
                     - here is another
                       - and here is a doubly indented line
                 `)
 ```
-
-Note: If you don't put the first line of chars on a new line, the function will have no effect as there will be no leading whitespace there, meaning it cannot decide how much whitespace to remove from subsequent lines.
 
 ## Maintainance
 

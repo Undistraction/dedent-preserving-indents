@@ -1,5 +1,6 @@
 import {
   complement,
+  converge,
   when,
   last,
   init,
@@ -12,11 +13,14 @@ import {
   head,
   isEmpty,
   identity,
-  converge,
+  reduce,
+  min,
 } from 'ramda'
+import { isNonEmptyString } from 'ramda-adjunct'
 
 const RE_LINE = /^[^\n]+/gm
 const RE_EMPTY_LINE = /^\s+$/
+const RE_LEADING_WHITESPACE = /\s+/
 const NEWLINE = `\n`
 
 const joinWithNewline = join(NEWLINE)
@@ -30,24 +34,34 @@ const isLastLineOnlyWhitespace = compose(
   last
 )
 
-const leadingSpaces = compose(match(/\s+/), head)
+const leadingSpaces = match(RE_LEADING_WHITESPACE)
+
+const leadingSpaceCount = compose(length, head, leadingSpaces)
+
+const minList = converge(reduce(min), [head, identity])
 
 const splitIntoLines = match(RE_LINE)
 
 const removeLastLineIfWhitespace = when(isLastLineOnlyWhitespace, init)
 
-const countLeadingSpacesOfFirstLine = compose(length, head, leadingSpaces)
+const countSpacesForLineWithLeastLeadingWhitespace = compose(
+  minList,
+  map(leadingSpaceCount)
+)
 
 const detectAndTrimLinesToRoot = converge(trimLinesToRoot, [
-  countLeadingSpacesOfFirstLine,
+  countSpacesForLineWithLeastLeadingWhitespace,
   identity,
 ])
 
-const indentToFirstLine = compose(
-  joinWithNewline,
-  detectAndTrimLinesToRoot,
-  removeLastLineIfWhitespace,
-  splitIntoLines
+const dedent = when(
+  isNonEmptyString,
+  compose(
+    joinWithNewline,
+    detectAndTrimLinesToRoot,
+    removeLastLineIfWhitespace,
+    splitIntoLines
+  )
 )
 
-export default indentToFirstLine
+export default dedent

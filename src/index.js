@@ -1,1 +1,1 @@
-export { default } from './indentToFirstLine';
+export { default } from './indentToFirstLine'
