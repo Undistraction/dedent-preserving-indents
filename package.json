@@ -1,19 +1,19 @@
 {
-  "name": "indent-to-first-line",
+  "name": "dedent-preserving-indents",
   "version": "0.1.0",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Undistraction/indent-to-first-line.git"
+    "url": "git+https://github.com/Undistraction/dedent-preserving-indents.git"
   },
   "files": ["dist", "src", "lib"],
   "keywords": [],
   "author": "Pedr Browne",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Undistraction/indent-to-first-line/issues"
+    "url": "https://github.com/Undistraction/dedent-preserving-indents/issues"
   },
-  "homepage": "https://github.com/Undistraction/indent-to-first-line",
+  "homepage": "https://github.com/Undistraction/dedent-preserving-indents",
   "scripts": {
     "build": "npm run build:lib",
     "prebuild:lib": "rimraf lib/*",

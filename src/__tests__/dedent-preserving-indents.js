@@ -1,6 +1,6 @@
 import dedent from '../index'
 
-describe(`indent-to-first-line`, () => {
+describe(`dedent-preserving-indents`, () => {
   it(`strips indents to first line`, () => {
     const value = `
             one

@@ -1,8 +1,8 @@
-# indent-to-first-line
+# dedent-preserving-indents
 
-[![NPM Version](https://img.shields.io/npm/v/indent-to-first-line.svg)](https://www.npmjs.com/package/indent-to-first-line)
-[![codecov](https://img.shields.io/codecov/c/github/Undistraction/indent-to-first-line.svg)](https://codecov.io/gh/Undistraction/indent-to-first-line)
-[![Build Status](https://img.shields.io/travis/Undistraction/indent-to-first-line.svg)](https://travis-ci.org/Undistraction/indent-to-first-line)
+[![NPM Version](https://img.shields.io/npm/v/dedent-preserving-indents.svg)](https://www.npmjs.com/package/dedent-preserving-indents)
+[![codecov](https://img.shields.io/codecov/c/github/Undistraction/dedent-preserving-indents.svg)](https://codecov.io/gh/Undistraction/dedent-preserving-indents)
+[![Build Status](https://img.shields.io/travis/Undistraction/dedent-preserving-indents.svg)](https://travis-ci.org/Undistraction/dedent-preserving-indents)
 [![DUB](https://img.shields.io/dub/l/vibe-d.svg)](./LICENSE.md)
 [![Node Security](https://nodesecurity.io/orgs/dwyl/projects/b14b4e9c-faf5-46b7-b8aa-9b1c026c4b51/badge)](https://nodesecurity.io/orgs/dwyl/projects/b14b4e9c-faf5-46b7-b8aa-9b1c026c4b51)
 
@@ -13,13 +13,13 @@ There is already a library called [dedent](https://www.npmjs.com/package/dedent)
 ## Install
 
 ```
-yarn add indent-to-first-line
+yarn add dedent-preserving-indents
 ```
 
 or
 
 ```
-npm install indent-to-first-line
+npm install dedent-preserving-indents
 ```
 
 ## Usage
