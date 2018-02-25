@@ -1,12 +1,16 @@
 {
   "name": "dedent-preserving-indents",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Undistraction/dedent-preserving-indents.git"
   },
-  "files": ["dist", "src", "lib"],
+  "files": [
+    "dist",
+    "src",
+    "lib"
+  ],
   "keywords": [],
   "author": "Pedr Browne",
   "license": "MIT",
